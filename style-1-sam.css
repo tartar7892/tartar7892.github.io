@@ -47,7 +47,7 @@ button{
     
     display:block;
     background-color: #8d1818;
-    background-image: url('image/shoto-3.jpg');
+    background-image: url('shoto-3.jpg');
     border-radius: 100px;
     border: 4px double #96a7c7;
     color: #000000;
@@ -73,7 +73,7 @@ button{
         
 }
 .shoto{
-    background-image:url('image/shoto.jpeg');
+    background-image:url('shoto.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color:rgb(186, 191, 190) ;
