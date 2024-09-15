@@ -1,0 +1,101 @@
+body {
+    background-color : rgb(186, 191, 190);
+    text-align:left;
+    color:rgb(00, 00, 00);
+    font-family:Helvetica, sans-seri,Verdana, Geneva, Tahoma, sans-serif;
+    }
+h1{
+   text-align: start;
+}
+footer{
+    text-align: right;
+  padding: 5px;
+  font-family:Helvetica, sans-seri,Verdana, Geneva, Tahoma, sans-serif
+}
+button{
+    background-color : rgb(26, 28, 30);
+    padding: 5px;
+    border: 1px;
+    text-align: center;
+    color:#000000;
+    font-family:Impact,Helvetica, sans-seri,Verdana, Geneva, Tahoma, sans-serif
+}
+.button:hover{
+    background-color: #ffffff95;
+        border: 2px solid #354e51;
+        box-shadow: 10px 5px 5px #7990b7;
+        color: #69778f;
+        text-align: center;
+        font-size: 22px;}
+.button{
+    
+    display:block;
+    background-color: #5d84a4;
+    border-radius: 10px;
+    border: 4px double #4e6997;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    cursor:pointer;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;}
+.buttonshoto{
+    
+    display:block;
+    background-color: #8d1818;
+    background-image: url('image/shoto-3.jpg');
+    border-radius: 100px;
+    border: 4px double #96a7c7;
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+    padding: 27px;
+    width: 250px;
+    cursor:pointer;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    
+}
+
+.buttonshoto:hover{
+    background-color: #ffffff95;
+        border: 2px solid #354e51;
+        box-shadow: 10px 5px 5px #7990b7;
+        color: #69778f;
+        text-align: center;
+        font-size: 22px;
+        
+}
+.shoto{
+    background-image:url('image/shoto.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:rgb(186, 191, 190) ;
+    color:rgb(30, 90, 35);
+    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.end{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+a{
+   text-decoration:none ;
+   color: rgba(255, 255, 255, 0.813)
+}
+
+.Izuku{
+
+}
+.buttonIzuku{
+    
+}
+.buttonIzuku:hover{
+    
+}
