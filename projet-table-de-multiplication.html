@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>projet table de multiplication</title>
+</head>
+<body>
+    <header class="bandeau">
+    
+      <h1><b>projet table de multiplication</b></h1>
+    </header>
+      <p><b>ci-dessous le code pour le jeu des tables de multiplication.</b></p>
+    <pre class="code">
+import turtle as t
+
+t.setup(800,600)
+t.shape("turtle")
+t.speed(0)
+
+nbr_points = 20## A la place du 20, mettez le nombre que vous souhaitez
+esp_point = 360/nbr_points
+
+coord_points = []
+
+t.penup()
+t.goto(0,-200)
+t.pendown()
+
+for _ in range(nbr_points) :
+    t.dot(5,"blue")
+    coord_points.append(t.position())
+    t.circle(200,esp_point)
+
+for i in range(200):
+    t.penup()
+    t.goto(coord_points[i%20])## A la place du 20, mettez le nombre que vous souhaitez
+    t.pendown()
+    t.goto(coord_points[(i*7)%20])## A la place du 20, mettez le nombre que vous souhaitez
+                                  ## le 7 est le nombre à multiplier
+index_dep = i
+while index_dep >= 20 :## A la place du 20, mettez le nombre que vous souhaitez
+    index_dep -= 20## A la place du 20, mettez le nombre que vous souhaitez
+    print(index_dep)
+  
+t.goto(coord_points[index_dep])
+
+t.pendown()
+index_arr = i*7## le 7 est le nombre à multiplier
+while index_arr >=20 :## A la place du 20, mettez le nombre que vous souhaitez
+    index_arr -= 20## A la place du 20, mettez le nombre que vous souhaitez
+t.goto(coord_points[index_arr])
+
+print(coord_points)
+
+t.exitonclick()</pre>
+
+<img class='image-mutiplication'
+src="image/projet-multiplication.png"
+alt="image projet-multiplication">
+<p>c'est un exmple du programme, il est calibrer pour la table de 7.</p>
+    <footer>  
+        <div class="end">
+          <button class="bouton">
+        <a href="projet-ecole.html"> retour </a>
+          </button>
+        </div>
+    </footer>     
+</body>

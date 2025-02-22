@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>algo trouve ta note</title>
+</head>
+<body>
+    <header class="bandeau">
+        <h1><b>Algorithme pour trouver sa note</b></h1>
+    </header>
+    <p><b>ci-dessous le code pour l'Algorithme qui permet de trouver qu'elle note avoir pour obtenir une moyenne souhaiter</b></p>
+    <br>
+    <pre class="code">
+def note_ramener_sur20():
+    note_pas_20=float(input("note à ramener sur 20: "))
+    la_note_total=float(input("la note max: "))
+    note_sur_20=note_pas_20/la_note_total*20
+    round(note_sur_20,2)
+    return note_sur_20
+
+def la_note():
+    nombre_de_note=int(input("combien de note: "))
+    lesnotes=[]
+    lescoeff=[]
+    note_et_coeff=[]
+    note_et_coeff_total=0
+    coeff_total=0
+    for i in range (nombre_de_note):
+        print("c'est pour la ",i+1," note")
+        special=str(input("la note doit etre ramener ou non sur 20: "))
+        if special=="oui":
+                note=note_ramener_sur20()
+                coeff=(float(input("quelle est le coef de cette note: ")))
+        else:
+            note=(float(input("quelle est la note: ")))
+            coeff=(float(input("quelle est le coef de cette note: ")))
+        lesnotes.append(note)
+        lescoeff.append(coeff)
+    
+
+    for o in range(len(lescoeff)):
+        coeff_total+=lescoeff[o]
+
+    for l in range(nombre_de_note):    
+        note_et_coeff.append(lesnotes[l]*lescoeff[l])
+
+    for j in range (len(note_et_coeff)):
+        note_et_coeff_total+=note_et_coeff[j]
+
+    la_moyenne_à_avoir_pour_etre_un_super_bg=float(input("quelle est la moyenne à atteindre: "))
+    
+    moyenne=note_et_coeff_total/coeff_total         #permet d'avoir la moyenne
+    moyenne=round(moyenne,2)        #permet d'arondir la moyenne
+    
+    print ("la moyenne est ici",moyenne)
+
+    coeff_de_la_note=float(input("quelle est le coeff de la note à avoir"))
+
+    nouveaucoeff=coeff_total+coeff_de_la_note   
+    
+    note_finale=(la_moyenne_à_avoir_pour_etre_un_super_bg*nouveaucoeff-note_et_coeff_total)/coeff_de_la_note
+    round(note_finale,2)
+    print("il te faut au minimum: ",note_finale)
+
+la_note()
+    </pre>
+    <img src="image/qu'elle note avoir.png" alt="image realisation projet algo trouve ta note.">
+<p>
+    Voici un exemple pour 2 notes, l'une ramenée sur 20 et l'autre initialement sur 20.
+    La première note est 20/40 avec un coefficient de 3 et la deuxième
+    est 20. Nous cherchons à obtenir la note qu'il faut en fonction de son 
+    coefficient pour avoir une moyenne générale de 18.
+</p>
+
+<footer>  
+    <div class="end">
+      <button class="bouton">
+        <a href="projet-perso.html"> retour </a>
+      </button>
+    </div>
+</footer> 
+</body>
+</html>
